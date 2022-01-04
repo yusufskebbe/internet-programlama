@@ -3,7 +3,7 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      Welcome to Instalife
+      Second thing has been change
     </div>
   );
 }
