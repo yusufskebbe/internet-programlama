@@ -1,14 +1,19 @@
 import React from 'react'
 import Post from './Post/Post'
+import usestyles from './styles'
 
-function Posts() {
+const Posts = () => {
+  const classes = usestyles ()
   return (
-    <div>
-      <Post />
-      <Post />
-      <Post />
-    </div>
-  )
+    <>
+    <h1>
+      Posts
+    </h1>
+    <Post />
+    <Post />
+    </>
+  
+  );
 }
 
 export default Posts
