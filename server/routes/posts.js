@@ -9,5 +9,4 @@ const router = express.Router();
 
 router.get('/' ,getPosts);
 
-// module.exports = router
-export default router
+ module.exports = router
