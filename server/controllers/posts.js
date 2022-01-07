@@ -1,13 +1,8 @@
-const 
 
 
-
-
-export const getPosts=(req,res) => {
+export const getPosts= async(req,res) => {
     res.send('post works!')
-
 }
 
-export const createPosts=(req,res) =>{
-    res.send('post Creation')
-}
+//module.exports = {getPosts}
+
