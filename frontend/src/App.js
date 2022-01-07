@@ -3,14 +3,18 @@ import './App.css';
 import { Container, AppBar, Typography, Grow, Grid } from '@material-ui/core'
 import { getPosts } from './actions/posts'
 import instaverse from './images/logo.png'
-import { useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux'
 import Posts from './components/Posts/Posts'
 import Form from './components/Form/Form'
+import usestyles from './styles'
+
 
 
 function App() {
 
   const dispatch = useDispatch()
+
+  const classes = usestyles()
 
   useEffect(() => {
     dispatch(getPosts())
@@ -19,9 +23,9 @@ function App() {
 
   return (
     <Container maxWidth='lg'>
-      <AppBar position='static' color='inherit'>
-        <Typography variant='h2' align='center' >InstaLife</Typography>
-        <img src={instaverse} alt='instaverse' height='60'></img>
+      <AppBar className={classes.appBar} position='static' color='inherit'>
+        <Typography className={classes.heading} variant='h2' align='center' >InstaLife</Typography>
+        <img className={classes.image} src={instaverse} alt='instaverse' height='60'></img>
       </AppBar>
       <Grow in>
         <Container>
