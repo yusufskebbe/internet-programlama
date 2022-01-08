@@ -29,6 +29,7 @@ const Post = ({ post }) => {
         <Typography variant='body2' color='textSecondary' component='p' >{post.message}</Typography>
       </CardContent>
       <CardActions className={classes.cardActions}>
+
         <Button size='small' color='primary' onClick={() => { }}>
           <ThumbUpAltIcon fontSize='small' />
           &nbsp; Like &nbsp;

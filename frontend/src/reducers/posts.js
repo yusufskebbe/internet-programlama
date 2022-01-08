@@ -1,4 +1,4 @@
-import * as api from '../api'
+
 
 export const postReducer = (posts = [], action) => {
   switch (action.type) {
