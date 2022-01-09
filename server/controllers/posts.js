@@ -12,6 +12,7 @@ const getPosts = async (req, res) => {
     }
 }
 
+
 const createPost = async (req, res) => {
     const post = req.body;
 
@@ -47,16 +48,16 @@ const deletePost = async (req, res) => {
     res.json({ message: 'post deleted successfully' })
 }
 
-const likePost = async (req,res) => {
+const likePost = async (req, res) => {
 
-    const {id} = req.params
-    
-    if(!mongoose.Types.ObjectId.isValid(id)) return res.status(404).send('No post with that id');
-    
+    const { id } = req.params
+
+    if (!mongoose.Types.ObjectId.isValid(id)) return res.status(404).send('No post with that id');
+
     const post = await PostMessage.findById(id)
-    const updatePost = await PostMessage.findById(id, {likeCount: post.likeCount + 1}, {new:true})
-    
-    res.json(updatePost)
-    }
+    const updatedPost = await PostMessage.findByIdAndUpdate(id, { likeCount: post.likeCount + 1 }, { new: true })
 
-module.exports = { createPost, deletePost, getPosts, updatePost, likePost}
+    res.json(updatedPost)
+}
+
+module.exports = { createPost, deletePost, getPosts, updatePost, likePost }
