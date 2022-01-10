@@ -13,7 +13,7 @@ const auth = async (req, res, next) => {
 
          req.userId = decodedData?.id
       }
-      console.log(token)
+
 
       next();
 
